@@ -131,6 +131,7 @@ def cross_validation_filter(data_name, nfold=10, need_shuffling=False, title_lin
                     c.evaluation(label_test)
         else:
             # select features
+            global index;
             start_time = time.time()
             if compare_with == 'MLFS':
                 index, scores = mlfs.multi_label_f_statistic(feature_train, label_train)
